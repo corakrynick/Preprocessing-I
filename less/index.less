@@ -29,8 +29,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+//variables
+@font1:'Satisfy', cursive;
+
+//mixins
+.margins{
+	margin:5%;
+}
+
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -56,4 +64,86 @@ table {
 html, body {
     height: 100%;
 }
+.container1{
+	.margins();
+	padding:2%;
+	background-color: grey;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
 
+	img{
+		max-width: 100%;
+		height:auto;
+		max-height:10vh;
+	}
+	h1{
+		font-size:60px;
+		font-family: @font1;
+	}//end of h1
+	
+	button{
+		width:70px;
+		background-color: green;
+		color:white;
+		display:flex;
+		justify-content:flex-start;
+	}//end of button
+	nav{
+		border:3%;
+		display:flex;
+		justify-content:flex-end;
+		align-items: space-evenly;
+	}//end of nav
+}//end of .container
+
+.middle{
+	width: 100%;
+	.margins();
+	display:flex;
+	justify-content: space-around;
+	h2{
+		font-size: 25px;
+		font-family: @font1;
+	}//end of h2
+	h3{
+		font-size: 20px;
+		font-family: @font1;
+	}//end of h3
+	ul{
+		border: solid black 1px;
+	}//end of ul
+    .intro{
+		.margin();
+		padding:2%;
+		width:80%;
+	}//end of .intro
+	#skills{
+		width:80%;
+	}// end of skills
+}//end of .middle
+
+#history{
+	width: 100%;
+	h2{
+		font-size: 25px;
+		font-family: @font1;
+	}
+	.table{
+	
+	}
+}
+
+
+
+
+
+
+@media(max-width:500px){
+      img{
+		  max-width: 100%;
+		  height:auto;
+		  max-height: 20vh;
+	  }
+
+}
